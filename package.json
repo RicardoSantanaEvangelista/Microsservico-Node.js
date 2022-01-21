@@ -21,6 +21,7 @@
   "homepage": "https://github.com/RicardoSantanaEvangelista/Micro-Servico-Node.js#readme",
   "devDependencies": {
     "@types/express": "^4.17.13",
+    "@types/jsonwebtoken": "^8.5.8",
     "@types/node": "^17.0.10",
     "@types/pg": "^8.6.4",
     "ts-node-dev": "^1.1.8",
@@ -29,6 +30,7 @@
   "dependencies": {
     "express": "^4.17.2",
     "http-status-codes": "^2.2.0",
+    "jsonwebtoken": "^8.5.1",
     "pg": "^8.7.1"
   }
 }
