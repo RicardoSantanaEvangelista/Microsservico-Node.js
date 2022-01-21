@@ -17,6 +17,16 @@ authorizationRouter.post('/token', (req: Request, res: Response, next: NextFunct
         if(authenticationType !== 'Basic' || !token){
             throw new ForbiddenError('Tipo de autenticação Inválida !');
         }
+
+        const tokenContent =  Buffer.from(token, 'base64').toString('utf-8');
+
+        const [username, password] =  tokenContent.split(':');
+
+        if(!username || !password){
+            throw new ForbiddenError('Credencias não preenchidas');
+        }
+
+       console.log(username, password);
  
     } catch (error) {
         next(error);
